@@ -1,0 +1,607 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* intro section  */
+#introgra{
+    width: 100%;
+    margin: 0;
+    height: 710px;
+    position: fixed;
+    z-index: 999999;
+    opacity: 1;
+}
+#titleName{
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    opacity: 0;
+}
+#titleAbout{
+    width: 40%;
+    position: absolute;
+    top: 53%;
+    left: 30%;
+    opacity: 0;
+}
+main{
+    opacity: 0;
+}
+/* Header here  */
+/* ------------------------------ */
+.header {
+    background-color: rgba(0, 61, 98, 1);
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    font-family: Helvetica Neue;
+    font-size: 15px;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: rgba(0, 48, 77, .8);
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-family: Helvetica Neue;
+    font-size: 35px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/* home page here  */
+/* ----------------------------- */
+
+#homePage{
+    background: url('images/container@2x.jpg')0 0  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+#intro{
+    width: 40%;
+    position: relative;
+    top: 30%;
+    left: 2%;
+}
+#intro h2{
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 55px;
+    font-weight: 150;
+    margin-bottom: 2%;
+}
+#intro h1{
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+#intro h3{
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 25px;
+    font-weight: 100;
+}
+#socilaMedia img{
+    width: 5%;
+    margin-left: 5%;
+    margin-top: 25px;
+}
+#socilaMedia img:hover{
+    transform: scale(1.3);
+    opacity: .8;
+}
+#resume{
+    border: solid 2px #000000;
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 20px;
+    font-weight: 200;
+    width: 130px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 0;
+    transition: all .3s;
+    /* -------- */
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+#resume:hover{
+    border: solid 2px #ffffff;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+#homeImg{
+    width: 50%;
+    height: auto;
+    position: relative;
+    top: -10%;
+    left: 45%;
+}
+#mySkillsBtn{
+    position: relative;
+    width: 170px;
+    top: 40%;
+    left: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#mySkillsBtn button{
+    border: solid 2px #ffffff;
+    color: #ffffff;
+    font-family: Helvetica Neue;
+    font-size: 25px;
+    font-weight: 200;
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 0;
+    transition: all .3s;
+}
+#mySkillsBtn button:hover{
+    border: solid 2px#000000;
+    background-color: rgba(255,255,255,.5);
+    color: #000000;
+}
+
+/* My skills page  */
+/* ----------------------------------------- */
+#mySkills{
+    background-image: linear-gradient(180deg, #2995FF, #004A90);
+}
+#mySkillTitle h1{
+    text-align: center;
+    padding-top: 4.0rem;
+    font-family: Helvetica Neue;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 5px 5px 5px #000000;
+}
+.mySkillContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 8%;
+}
+.skillBox{
+    width: 25%;
+    background-color: #ffffff;
+    margin: 3%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+}
+.skillBox img{
+    width: 20%;
+    height: auto;
+}
+.skillBox h2{
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+.skillBox p{
+    text-align: center;
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    font-weight: 200;
+    color: #000000;
+    margin: 10px;
+}
+/* My work page here */
+/* -------------------------------- */
+#myWorkTitle h1{
+    text-align: center;
+    padding-top: 4.0rem;
+    font-family: Helvetica Neue;
+    font-size: 50px;
+    color: #004A90;
+    margin-bottom: 4.0rem;
+}
+.myWorkContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    margin-bottom: 7%;
+    border-bottom: 1px dotted #707070;
+    padding-bottom: 40px;
+}
+.myWorkContent img{
+    width: 40%;
+    height: auto;
+}
+.mwcInfo{
+    width: 55%;
+    padding-left: 4%;
+}
+.mwcInfo h2{
+    font-family: Helvetica Neue;
+    margin-bottom: 3%;
+    font-size: 45px;
+    font-weight: 150;
+    color: #003D62;
+}
+.mwcInfo p{
+    font-family: Helvetica Neue;
+    margin-bottom: 5%;
+    width: 80%;
+    font-size: 25px;
+    font-weight: 100;
+    color: #000000;
+}
+.infoImg img{
+    margin-bottom: 5%;
+    width: 30px;
+}
+#visitBtn button{
+    border: solid 2px #000000;
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 25px;
+    font-weight: 200;
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 0;
+    transition: all .3s;
+    /* -------- */
+    margin-bottom: 40px;
+}
+#visitBtn button:hover{
+    border: solid 2px #ffffff;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+#contactMeBtn{
+    position: relative;
+    width: 170px;
+    bottom: 40%;
+    left: 44%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#contactMeBtn button{
+    border: solid 2px #000000;
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 25px;
+    font-weight: 200;
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 0;
+    transition: all .3s;
+    /* -------- */
+    margin-bottom: 100px;
+}
+#contactMeBtn button:hover{
+    border: solid 2px #ffffff;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+
+/* Contact me page here */
+/* ---------------------------- */
+#contactMeTitle h1{
+    text-align: center;
+    padding-top: 4.0rem;
+    font-family: Helvetica Neue;
+    font-size: 50px;
+    color: #004A90;
+    margin-bottom: 4.0rem;
+}
+#inputSec{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#inputSec input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 2%;
+    border: none;
+    background-color: #E2E2E2;
+    padding-left: 20px;
+}
+button[type="submit"]{
+    border: solid 2px #000000;
+    color: #000000;
+    font-family: Helvetica Neue;
+    font-size: 25px;
+    font-weight: 200;
+    width: 170px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 0;
+    transition: all .3s;
+    /* -------- */
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+button[type="submit"]:hover{
+    border: solid 2px #ffffff;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+}
+
+/* Footer here */
+/* ------------------------ */
+footer{
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+    background-color: #003D62;
+}
+footer h2{
+    font-family: Helvetica Neue;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+    float: left;
+    }
+    .header li a {
+    padding: 20px 30px;
+    }
+    .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    }
+    .header .menu-icon {
+    display: none;
+    }
+
+}
+@media (max-width: 500px){
+
+    /* Home page here */
+    /* ------------------------- */
+
+    #homePage{
+        background: url('images/container@2x.jpg')50 50  ;
+        height: 650px;
+    }   
+    #intro{
+        width: 100%;
+        top: 25%;
+    }
+    #homeImg{
+        display: none;
+    }
+    #socilaMedia img{
+        width: 7%;
+        margin-left: 10%;
+        margin-top: 40px;
+    }
+    #mySkillBtn{
+        display: none;
+    }
+
+    /* My skill page here  */
+    /* ----------------------------- */
+
+    #mySkillTitle h1{
+        padding-top: 2.0rem;
+        font-size: 30px;
+    }
+    .skillBox:first-child{
+        margin-left: 0;
+    }
+    .skillBox{
+        width: 90%;
+        margin: 4%;
+        margin-left: 0;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    #myWorkBtn{
+        display: none;
+    }
+
+    /* My work page here  */
+    /* ---------------------------- */
+    #myWorkTitle h1{
+        padding-top: 2.0rem;
+        font-size: 30px;
+    }
+    .myWorkContent{
+        padding-left: 5%;
+        margin-bottom: 7%;
+        padding-bottom: 10px;
+    }
+    .myWorkContent img{
+        width: 95%;
+        height: auto;
+    }
+    .mwcInfo{
+        width: 95%;
+        padding-left: 0;
+    }
+    .mwcInfo h2{
+        font-family: Helvetica Neue;
+        margin-bottom: 3%;
+        font-size: 45px;
+        font-weight: 150;
+        color: #003D62;
+    }
+    .mwcInfo p{
+        font-family: Helvetica Neue;
+        margin-bottom: 5%;
+        font-size: 25px;
+        font-weight: 100;
+        color: #000000;
+    }
+    .infoImg img{
+        margin-bottom: 5%;
+        width: 30px;
+    }
+    .swapC {
+        display:table;    
+    }
+    .mwcInfo {
+        display:table-footer-group;
+    }
+    .imageweb {
+        display:table-row-group;
+    }
+    .swapC p{
+        width: 90%;
+    }
+    #visitBtn button{
+        font-size: 20px;
+        width: 120px;
+        height: 35px;
+    }
+    #contactMeBtn{
+        display: none;
+    }
+
+    /* Contact me page here  */
+    /* ------------------------------- */
+    #contactMeTitle h1{
+        padding-top: 2.0rem;
+        font-size: 30px;
+    }
+    #inputSec{
+        width: 80%;
+    }
+    #inputSec input{
+        height: 40px;
+        margin-bottom: 3%;
+    }
+    #submitBtn button{
+        border: solid 1px #000000;
+        font-size: 20px;
+        width: 120px;
+        height: 35px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    /* Footer here  */
+    /* --------------------- */
+    footer h2{
+        font-size: 10px;
+    }
+}
+
+.reveal{
+    opacity: 0;
+    margin-top: 20%;
+}
